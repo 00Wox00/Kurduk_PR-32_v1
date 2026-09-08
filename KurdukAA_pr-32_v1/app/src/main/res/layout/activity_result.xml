@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Верхняя белая часть с заголовком -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кредитный калькулятор"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Нижняя зелёная часть -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="#83D96E"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp">
+
+        <!-- Сумма кредита — широкая карточка -->
+        <TextView
+            android:id="@+id/tvResultAmount"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Сумма кредита"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:background="@drawable/rounded_white"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Срок кредита — карточка поменьше по центру -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/tvResultTerm"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:text="срок кредита"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:background="@drawable/rounded_white" />
+
+        </LinearLayout>
+
+        <!-- Ежемесячный платёж — широкая карточка -->
+        <TextView
+            android:id="@+id/tvResultPayment"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="ежемесячный платёж"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:background="@drawable/rounded_white"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Пустое место чтобы кнопка была внизу -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Кнопка Регистрация -->
+        <Button
+            android:id="@+id/btnToMain"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Регистрация"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button" />
+
+    </LinearLayout>
+
+</LinearLayout>
