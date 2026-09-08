@@ -40,14 +40,12 @@ class MainActivity : AppCompatActivity() {
             val savedLogin = prefs.getString("login", null)
 
             if (savedLogin == null) {
-                // Первый вход — сохраняем что ввёл пользователь
                 prefs.edit()
                     .putString("login", login)
                     .putString("password", password)
                     .apply()
                 goToCalculator()
             } else {
-                // Повторный вход — сверяем с сохранёнными
                 val savedPassword = prefs.getString("password", "")
                 if (login == savedLogin && password == savedPassword) {
                     goToCalculator()
