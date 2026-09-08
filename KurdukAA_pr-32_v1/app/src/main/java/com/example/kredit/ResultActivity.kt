@@ -18,7 +18,6 @@ class ResultActivity : AppCompatActivity() {
         val tvResultPayment: TextView = findViewById(R.id.tvResultPayment)
         val btnToMain: Button = findViewById(R.id.btnToMain)
 
-        // Получаем данные переданные с экрана 2
         val payment = intent.getDoubleExtra("payment", 0.0)
         val amount = intent.getIntExtra("amount", 0)
         val term = intent.getIntExtra("term", 0)
@@ -26,12 +25,10 @@ class ResultActivity : AppCompatActivity() {
         tvResultAmount.text = "Сумма кредита: $amount руб."
         tvResultTerm.text = "Срок кредита: $term мес."
 
-        // Переводим в тысячи рублей как требует задание
         val paymentInThousands = payment / 1000.0
         val paymentText = String.format("%.2f тыс. руб./мес.", paymentInThousands)
         tvResultPayment.text = "Ежемесячный платёж: $paymentText"
 
-        // Кнопка Регистрация — переход на экран 1
         btnToMain.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
